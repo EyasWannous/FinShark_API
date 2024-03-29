@@ -10,9 +10,15 @@ public class ProfilingMiddleware(RequestDelegate next, ILogger<ProfilingMiddlewa
     public async Task InvokeAsync(HttpContext context)
     {
         var stopwatch = new Stopwatch();
+
         stopwatch.Start();
         await _next(context);
         stopwatch.Stop();
-        _logger.LogInformation($"Requset {context.Request.Path} took {stopwatch.ElapsedMilliseconds} ms to excute");
+
+        _logger.LogInformation(
+            "Requset #{context.Request.Path} took #{stopwatch.ElapsedMilliseconds} ms to excute",
+            context.Request.Path,
+            stopwatch.ElapsedMilliseconds
+        );
     }
 }
