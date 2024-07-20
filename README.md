@@ -83,3 +83,24 @@ FinShark API is a web application designed to manage stock portfolios and user c
 1. Clone the repository
    ```bash
    git clone https://github.com/EyasWannous/FinShark_API.git
+
+2. Navigate to the project directory
+   ```bash
+   cd FinShark_API
+
+3. Update the database
+   ```bash
+   dotnet ef database update
+
+4. Run the application
+   ```bash
+   dotnet run
+
+##Configuration
+The application configuration is managed through appsettings.json and appsettings.Development.json.
+
+##Contributing
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+##License
+This project is licensed under the MIT License.
