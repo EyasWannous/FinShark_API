@@ -96,11 +96,11 @@ FinShark API is a web application designed to manage stock portfolios and user c
    ```bash
    dotnet run
 
-##Configuration
+## Configuration
 The application configuration is managed through appsettings.json and appsettings.Development.json.
 
-##Contributing
+## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request.
 
-##License
+## License
 This project is licensed under the MIT License.
